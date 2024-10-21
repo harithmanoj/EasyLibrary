@@ -1,0 +1,9 @@
+h : h : false >> e
+e : e : false >> l
+l : l : false >> l
+l : l : false >> o
+o : o : false >> \
+\ : \n : true >> \
+\ : \t : true >> y
+y : y : false >> o
+o : o : false >> end

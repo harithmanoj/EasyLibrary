@@ -1,0 +1,14 @@
+easyMath::divideRoundUp(10, 3) 4
+easyMath::divideRoundUp(30, 40) 1
+easyMath::divideRoundUp(8, 13) 1
+easyMath::divideRoundUp(2, 1) 2
+easyMath::divideRoundUp(16, 9) 2
+easyMath::divideRoundUp(64u, 33u) 2
+easyMath::divideRoundUp(56ull, 20ull) 3
+easyMath::divideRoundUp(32ll, 8ll) 4
+easyMath::divideRoundUp(128ull, 33ull) 4
+easyMath::divideRoundUp(23, 12) 2
+easyMath::divideRoundUp(b, 26u) 2
+easyMath::divideRoundUp(64ll, 27ll) 3
+easyMath::divideRoundUp(1024ull, 2ull) 512
+constexpr log_a 9

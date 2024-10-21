@@ -1,0 +1,352 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile doxygen_version="1.11.0" doxygen_gitid="9b424b03c9833626cd435af22a444888fbbb192d">
+  <compound kind="file">
+    <name>version.h</name>
+    <path>include/easyLib/</path>
+    <filename>df/d00/version_8h.html</filename>
+    <namespace>easyLib</namespace>
+    <namespace>easyLib::meta</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>INCLUDE_EASYLIB_VERSION_H_INCLUDED</name>
+      <anchorfile>df/d00/version_8h.html</anchorfile>
+      <anchor>a633cd0210aa483a3e800c5bb137040a5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>easyMath.h</name>
+    <path>include/easyMathLib/</path>
+    <filename>df/d00/easy_math_8h.html</filename>
+    <includes id="df/d00/version_8h" name="version.h" local="no" import="no" module="no" objc="no">easyLib/version.h</includes>
+    <class kind="struct">easyMath::NumericTraits</class>
+    <class kind="struct">easyMath::SelfCheckingNumericTraits</class>
+    <namespace>easyMath</namespace>
+    <namespace>easyMath::impl_detail_</namespace>
+    <concept>easyMath::NumericType</concept>
+    <concept>easyMath::IntegerRepresentation</concept>
+    <concept>easyMath::impl_detail_::BitWiseOperable_</concept>
+    <concept>easyMath::Integral</concept>
+    <concept>easyMath::UnsignedIntegral</concept>
+    <concept>easyMath::SignedIntegral</concept>
+    <member kind="define">
+      <type>#define</type>
+      <name>INCLUDE_EASYMATHLIB_EASYMATH_H_INCLUDED</name>
+      <anchorfile>df/d00/easy_math_8h.html</anchorfile>
+      <anchor>a436a9d00534a68a7c011d2014b281529</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>easyMath::NumericTraits</name>
+    <filename>dc/d01/structeasy_math_1_1_numeric_traits.html</filename>
+    <templarg>NumericType Numeric</templarg>
+    <base>easyMath::SelfCheckingNumericTraits&lt; Numeric &gt;</base>
+    <member kind="variable" static="yes">
+      <type>static constexpr bool</type>
+      <name>hasBitMaskGenerator</name>
+      <anchorfile>d9/d00/structeasy_math_1_1_self_checking_numeric_traits.html</anchorfile>
+      <anchor>a3ef2dde54d4c09128c64052e769c24a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr bool</type>
+      <name>is2sCompRepInteger</name>
+      <anchorfile>dc/d01/structeasy_math_1_1_numeric_traits.html</anchorfile>
+      <anchor>a23c659554d66bbdcc0596d1b5b796f14</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr bool</type>
+      <name>isCustomSized</name>
+      <anchorfile>d9/d00/structeasy_math_1_1_self_checking_numeric_traits.html</anchorfile>
+      <anchor>a7c04da169bcf80c63cffb82560f5f038</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr bool</type>
+      <name>isOverflowCheckable</name>
+      <anchorfile>d9/d00/structeasy_math_1_1_self_checking_numeric_traits.html</anchorfile>
+      <anchor>abe38c35c60489944afa35d82660264f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr bool</type>
+      <name>isUnderflowCheckable</name>
+      <anchorfile>d9/d00/structeasy_math_1_1_self_checking_numeric_traits.html</anchorfile>
+      <anchor>aab41cf1e9f8239ef01178e6df5da75e2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>easyMath::SelfCheckingNumericTraits</name>
+    <filename>d9/d00/structeasy_math_1_1_self_checking_numeric_traits.html</filename>
+    <templarg>NumericType Numeric</templarg>
+    <member kind="variable" static="yes">
+      <type>static constexpr bool</type>
+      <name>hasBitMaskGenerator</name>
+      <anchorfile>d9/d00/structeasy_math_1_1_self_checking_numeric_traits.html</anchorfile>
+      <anchor>a3ef2dde54d4c09128c64052e769c24a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr bool</type>
+      <name>isCustomSized</name>
+      <anchorfile>d9/d00/structeasy_math_1_1_self_checking_numeric_traits.html</anchorfile>
+      <anchor>a7c04da169bcf80c63cffb82560f5f038</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr bool</type>
+      <name>isOverflowCheckable</name>
+      <anchorfile>d9/d00/structeasy_math_1_1_self_checking_numeric_traits.html</anchorfile>
+      <anchor>abe38c35c60489944afa35d82660264f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr bool</type>
+      <name>isUnderflowCheckable</name>
+      <anchorfile>d9/d00/structeasy_math_1_1_self_checking_numeric_traits.html</anchorfile>
+      <anchor>aab41cf1e9f8239ef01178e6df5da75e2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="concept">
+    <name>easyMath::impl_detail_::BitWiseOperable_</name>
+    <filename>de/d00/concepteasy_math_1_1impl__detail___1_1_bit_wise_operable__.html</filename>
+  </compound>
+  <compound kind="concept">
+    <name>easyMath::IntegerRepresentation</name>
+    <filename>db/d03/concepteasy_math_1_1_integer_representation.html</filename>
+  </compound>
+  <compound kind="concept">
+    <name>easyMath::Integral</name>
+    <filename>d8/d02/concepteasy_math_1_1_integral.html</filename>
+  </compound>
+  <compound kind="concept">
+    <name>easyMath::NumericType</name>
+    <filename>dd/d00/concepteasy_math_1_1_numeric_type.html</filename>
+  </compound>
+  <compound kind="concept">
+    <name>easyMath::SignedIntegral</name>
+    <filename>de/d01/concepteasy_math_1_1_signed_integral.html</filename>
+  </compound>
+  <compound kind="concept">
+    <name>easyMath::UnsignedIntegral</name>
+    <filename>df/d03/concepteasy_math_1_1_unsigned_integral.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>easyLib</name>
+    <filename>d5/d03/namespaceeasy_lib.html</filename>
+    <namespace>easyLib::meta</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>easyLib::meta</name>
+    <filename>d6/d03/namespaceeasy_lib_1_1meta.html</filename>
+    <member kind="enumeration">
+      <type></type>
+      <name>BuildType</name>
+      <anchorfile>d6/d03/namespaceeasy_lib_1_1meta.html</anchorfile>
+      <anchor>ad5fb90ce7676630efe8e789981ceb3cb</anchor>
+      <arglist></arglist>
+      <enumvalue file="d6/d03/namespaceeasy_lib_1_1meta.html" anchor="ad5fb90ce7676630efe8e789981ceb3cba002101f8725e5c78d9f30d87f3fa4c87">ALPHA</enumvalue>
+      <enumvalue file="d6/d03/namespaceeasy_lib_1_1meta.html" anchor="ad5fb90ce7676630efe8e789981ceb3cba32987cdf8a725702042ab18f5c700905">STABLE</enumvalue>
+    </member>
+    <member kind="variable">
+      <type>constexpr BuildType</type>
+      <name>versionBuild</name>
+      <anchorfile>d6/d03/namespaceeasy_lib_1_1meta.html</anchorfile>
+      <anchor>a1d2c3f624e3a7d6fa2884671e4cb0046</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr std::uint64_t</type>
+      <name>versionMajor</name>
+      <anchorfile>d6/d03/namespaceeasy_lib_1_1meta.html</anchorfile>
+      <anchor>a0695a9cbe615914f886e5f78efcd3c0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr std::uint64_t</type>
+      <name>versionMinor</name>
+      <anchorfile>d6/d03/namespaceeasy_lib_1_1meta.html</anchorfile>
+      <anchor>a1eb5e88be8ff36fa28d13c343e8a8946</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr std::uint64_t</type>
+      <name>versionRevision</name>
+      <anchorfile>d6/d03/namespaceeasy_lib_1_1meta.html</anchorfile>
+      <anchor>aac248943d3cc8225a63c28a1f483d3c8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr std::string_view</type>
+      <name>versionString</name>
+      <anchorfile>d6/d03/namespaceeasy_lib_1_1meta.html</anchorfile>
+      <anchor>ae57a1ce0710f73f8d44616e2517b4105</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>easyMath</name>
+    <filename>de/d00/namespaceeasy_math.html</filename>
+    <namespace>easyMath::impl_detail_</namespace>
+    <class kind="struct">easyMath::NumericTraits</class>
+    <class kind="struct">easyMath::SelfCheckingNumericTraits</class>
+    <concept>easyMath::NumericType</concept>
+    <concept>easyMath::IntegerRepresentation</concept>
+    <concept>easyMath::Integral</concept>
+    <concept>easyMath::UnsignedIntegral</concept>
+    <concept>easyMath::SignedIntegral</concept>
+    <member kind="typedef">
+      <type>std::conditional_t&lt; bitSize&lt; TypeA &gt;()&lt; bitSize&lt; TypeB &gt;(), TypeB, TypeA &gt;</type>
+      <name>LargerType</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>a57ba8f47e4901a84561c7957f7513e8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>SizeCapableUint&lt; std::bit_width(maxValue)&gt;</type>
+      <name>MaxCapableUint</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>a888d384faf317a2988bd1caef4f97712</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>impl_detail_::Integer8ThresholdSize_&lt; bitSize, true &gt;</type>
+      <name>SizeCapableInt</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>a1aeb4db0b6392f15455223ab87eb045f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>impl_detail_::Integer8ThresholdSize_&lt; bitSize, false &gt;</type>
+      <name>SizeCapableUint</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>aed13bdb347b7578a435b38d72321303b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::conditional_t&lt; bitSize&lt; TypeA &gt;()&lt; bitSize&lt; TypeB &gt;(), TypeA, TypeB &gt;</type>
+      <name>SmallerType</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>abd12fa845789fb5e37f387824c6e6271</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>addAndCheckOverflow</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>a2b6ae77dbc8b407d1608446fb0575a4a</anchor>
+      <arglist>(Numeric &amp;lhs, Numeric rhs, bool lastOpOverflow=false, Numeric max=NumericTraits&lt; Numeric &gt;::max()) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>addAndCheckOverflow</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>ab20d9ca956d1dc1dc594e6f504684c46</anchor>
+      <arglist>(Numeric &amp;sum, Numeric lhs, Numeric rhs, bool lastOpOverflow=false, Numeric max=NumericTraits&lt; Numeric &gt;::max()) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>consteval std::size_t</type>
+      <name>bitSize</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>a7a6532c1c0c52da17d051ecdbc2e4f62</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Numeric</type>
+      <name>divideRoundUp</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>a9e3dc04d8565884d49c2bf6c681ebb6e</anchor>
+      <arglist>(const Numeric &amp;numerator, const Numeric &amp;denominator) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Integer</type>
+      <name>extractBits</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>ac24c991ebaefea6d915ed34f231af6f4</anchor>
+      <arglist>(Integer value, std::size_t offset, std::size_t size) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Integer</type>
+      <name>nBitMask</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>a090e59c05e4758f71c06a5f2b7c2c88f</anchor>
+      <arglist>(std::size_t size) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr std::array&lt; Destination, divideRoundUp&lt; std::size_t &gt;(bitSize&lt; Source &gt;(), destSize_)&gt;</type>
+      <name>splitInteger</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>a3e0cfa57b7fd815385cf1cf5aca216fc</anchor>
+      <arglist>(Source value) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>valueBetween</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>a59b5d27994bfe472d4b14c5921e3387b</anchor>
+      <arglist>(T value, T begin, T end) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>valueBetweenInclusive</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>a9617f48e66367ad57cae691f5c781fa6</anchor>
+      <arglist>(T value, T begin, T end) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>willAddOverflow</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>ad42940d525ef658a3d3546829ea9370e</anchor>
+      <arglist>(Numeric lhs, Numeric rhs, Numeric max=NumericTraits&lt; Numeric &gt;::max(), Numeric lowest=NumericTraits&lt; Numeric &gt;::lowest()) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>willSubtractUnderflow</name>
+      <anchorfile>de/d00/namespaceeasy_math.html</anchorfile>
+      <anchor>a50ac8802b3bfccb70e766c77922c7a19</anchor>
+      <arglist>(Numeric lhs, Numeric rhs, Numeric max=NumericTraits&lt; Numeric &gt;::max(), Numeric lowest=NumericTraits&lt; Numeric &gt;::lowest()) noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>easyMath::impl_detail_</name>
+    <filename>d9/d02/namespaceeasy_math_1_1impl__detail__.html</filename>
+    <concept>easyMath::impl_detail_::BitWiseOperable_</concept>
+    <member kind="typedef">
+      <type>std::conditional_t&lt; bitSize&lt;=16, std::conditional_t&lt; isSigned, std::int16_t, std::uint16_t &gt;, Integer32ThresholdSize_&lt; bitSize, isSigned &gt; &gt;</type>
+      <name>Integer16ThresholdSize_</name>
+      <anchorfile>d9/d02/namespaceeasy_math_1_1impl__detail__.html</anchorfile>
+      <anchor>af4586fda41fcff2656f1a1aac6def5d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::conditional_t&lt; bitSize&lt;=32, std::conditional_t&lt; isSigned, std::int32_t, std::uint32_t &gt;, std::conditional_t&lt; isSigned, std::int64_t, std::uint64_t &gt; &gt;</type>
+      <name>Integer32ThresholdSize_</name>
+      <anchorfile>d9/d02/namespaceeasy_math_1_1impl__detail__.html</anchorfile>
+      <anchor>a624a5bc4232796a47a9b3dd6d16d2195</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::conditional_t&lt; bitSize&lt;=8, std::conditional_t&lt; isSigned, std::int8_t, std::uint8_t &gt;, Integer16ThresholdSize_&lt; bitSize, isSigned &gt; &gt;</type>
+      <name>Integer8ThresholdSize_</name>
+      <anchorfile>d9/d02/namespaceeasy_math_1_1impl__detail__.html</anchorfile>
+      <anchor>a375e6d4aee1a3da8a0ed31ac390a48e2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="page">
+    <name>md_docs_2doc__guide</name>
+    <title>Documentation Guide for EasyLibrary</title>
+    <filename>d4/d03/md_docs_2doc__guide.html</filename>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title>EasyMath library</title>
+    <filename>index.html</filename>
+    <docanchor file="index.html" title="EasyMath library">md_include_2easy_math_lib_2_r_e_a_d_m_e</docanchor>
+  </compound>
+</tagfile>

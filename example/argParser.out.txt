@@ -1,0 +1,7 @@
+POSITIONAL 11 >> helloPositional
+ARGUMENT   argtype / arg : true : args : args2
+OPTIONAL   custom1 /  : cf1 : cs1 : ct1 : true >> cf1
+OPTIONAL   custom2 /  : cf2 : cs2 : ct2 : true >> cf2
+BOOLEAN    boolSwitch1 / bs : true >> true
+BOOLEAN    anotherboolean / bs2 : true >> true
+BOOLEAN    boolean3 / bs3 : true >> true

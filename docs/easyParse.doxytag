@@ -1,0 +1,601 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile doxygen_version="1.11.0" doxygen_gitid="9b424b03c9833626cd435af22a444888fbbb192d">
+  <compound kind="file">
+    <name>easyParse.h</name>
+    <path>include/easyParseLib/</path>
+    <filename>df/d02/easy_parse_8h.html</filename>
+    <namespace>easyParse</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>INCLUDE_EASYPARSELIB_EASYPARSE_H_INCLUDED</name>
+      <anchorfile>df/d02/easy_parse_8h.html</anchorfile>
+      <anchor>a039120f969b775fbcdf8a125fae65636</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>argParser.cpp</name>
+    <path>src/easyParseLib/</path>
+    <filename>d7/d02/arg_parser_8cpp.html</filename>
+    <namespace>easyParse</namespace>
+  </compound>
+  <compound kind="file">
+    <name>easyParse.cpp</name>
+    <path>src/easyParseLib/</path>
+    <filename>d8/d00/easy_parse_8cpp.html</filename>
+    <includes id="df/d02/easy_parse_8h" name="easyParse.h" local="no" import="no" module="no" objc="no">easyParseLib/easyParse.h</includes>
+    <namespace>easyParse</namespace>
+  </compound>
+  <compound kind="class">
+    <name>easyParse::ArgParser</name>
+    <filename>de/d00/classeasy_parse_1_1_arg_parser.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ArgParser</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a6df03e35e3077d9c153687acf7114d84</anchor>
+      <arglist>(int argc, const char **argv) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>ArgParser &amp;</type>
+      <name>addArgSwitch</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a26c4a9b4254963c8159d464c632176a5</anchor>
+      <arglist>(ArgSwitch argSw)</arglist>
+    </member>
+    <member kind="function">
+      <type>ArgParser &amp;</type>
+      <name>addArgSwitch</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a56524af188c2cdb74f24271cfc370a6b</anchor>
+      <arglist>(const std::string &amp;longForm, const std::string &amp;shortForm, const std::vector&lt; std::string &gt; &amp;shortFormValue, const std::vector&lt; std::string &gt; &amp;setValue)</arglist>
+    </member>
+    <member kind="function">
+      <type>ArgParser &amp;</type>
+      <name>addBoolSwitch</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a63cc6fc2f4c5712bdae3a8ad2fc51190</anchor>
+      <arglist>(BoolSwitch boolSw)</arglist>
+    </member>
+    <member kind="function">
+      <type>ArgParser &amp;</type>
+      <name>addBoolSwitch</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a4a043b7339f5122aa8ef37766fd358f9</anchor>
+      <arglist>(const std::string &amp;longForm, const std::string &amp;shortForm, bool value)</arglist>
+    </member>
+    <member kind="function">
+      <type>ArgParser &amp;</type>
+      <name>addOptSwitch</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>afcf003b064cfea1fc05bf705586f23d4</anchor>
+      <arglist>(OptSwitch optSw)</arglist>
+    </member>
+    <member kind="function">
+      <type>ArgParser &amp;</type>
+      <name>addOptSwitch</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a81077d57b6453e5aab562f99d5929f78</anchor>
+      <arglist>(std::string longForm, std::vector&lt; std::string &gt; options, std::size_t setValue)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string_view</type>
+      <name>arg0</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a001df0280fb5c7103db31a0b06742874</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>argIterator</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a2666a5731c5361bea217e254b784d5d1</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>argSentinal</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a27a985935b58f76936650379503d6f81</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>boolIterator</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>af7b71685efb9558a89df43475ab9686d</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>boolSentinal</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>af00c916cb4165965d933164cbb3c9392</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>findLongArg</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a19f72d343a3613e17f11247002e1bcc9</anchor>
+      <arglist>(std::string_view longForm) const</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>findLongBool</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a660e935e7c5f254d56599949d76461da</anchor>
+      <arglist>(std::string_view longForm) const</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>findLongOpt</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a2ca496a8565b2de064e62c6ff0770989</anchor>
+      <arglist>(std::string_view longForm) const</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>findShortArg</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a6b39428cca0794b7d33d568282c4ff5a</anchor>
+      <arglist>(std::string_view shortForm)</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>findShortBool</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a9a2570232648ebeafc606a383b609ac7</anchor>
+      <arglist>(std::string_view shortForm)</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>findShortOpt</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a451b48f74f88cb40ed9e780b6a9d6f80</anchor>
+      <arglist>(std::string_view shortForm)</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>optIterator</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a7bb9a4da556e346e28e303173e9bdabb</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>optSentinal</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>af5da5c29eece841dfa0b800bf5a0c46d</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>parse</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a6a7230381d38c2ab5b743308446e7a71</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>posIterator</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>aafe0663c82cd6386d372eb4802067396</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>const auto &amp;</type>
+      <name>positionalArgAt</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>aaf41fc3cea522e250cd149c8cd755669</anchor>
+      <arglist>(std::size_t index) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>positionalArgCount</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a85b225bcb968240bc0adc5d4707809d0</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>posSentinal</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a3cd3dd2466271ebacd211064b314b7ff</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>ArgParser &amp;</type>
+      <name>reserve</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a5c1bf841cc2ea7d631fa3fa02a092c2b</anchor>
+      <arglist>(std::size_t boolSize, std::size_t argSize, std::size_t optSize)</arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>int</type>
+      <name>argc_</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>aede1202cfcbd2e265708b08c13a96ae8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::vector&lt; ArgSwitch &gt;</type>
+      <name>argSwitchList_</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>ada4d02cf4143c6c4c6feb8f42450c04e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>const char **</type>
+      <name>argv_</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a88045e1e2154988396a39a5302d5a9de</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::vector&lt; BoolSwitch &gt;</type>
+      <name>boolSwitchList_</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>afdd473643ae9e09ec143a0228025d3e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::vector&lt; OptSwitch &gt;</type>
+      <name>optSwitchList_</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>aeb6fcd741aa716cff9b7b8f446f0ed15</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::vector&lt; Positional &gt;</type>
+      <name>posArgList_</name>
+      <anchorfile>de/d00/classeasy_parse_1_1_arg_parser.html</anchorfile>
+      <anchor>a6ccb6ff426109054fd606fde1dab09ae</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>easyParse::ArgSwitch</name>
+    <filename>d3/d02/structeasy_parse_1_1_arg_switch.html</filename>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>longForm</name>
+      <anchorfile>d3/d02/structeasy_parse_1_1_arg_switch.html</anchorfile>
+      <anchor>adcfe2d8b202a5670d602824e246bdd11</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>overridden</name>
+      <anchorfile>d3/d02/structeasy_parse_1_1_arg_switch.html</anchorfile>
+      <anchor>a9c578f038d5482e47e576b225be30884</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>setValue</name>
+      <anchorfile>d3/d02/structeasy_parse_1_1_arg_switch.html</anchorfile>
+      <anchor>abf67c35ee556f4c95045657c4e3de341</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>shortForm</name>
+      <anchorfile>d3/d02/structeasy_parse_1_1_arg_switch.html</anchorfile>
+      <anchor>acd75984bf77cff41e120650333e0e579</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>shortFormValue</name>
+      <anchorfile>d3/d02/structeasy_parse_1_1_arg_switch.html</anchorfile>
+      <anchor>ac19139ddcb530bc93bee05945896b2d0</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>easyParse::BoolSwitch</name>
+    <filename>da/d03/structeasy_parse_1_1_bool_switch.html</filename>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>longForm</name>
+      <anchorfile>da/d03/structeasy_parse_1_1_bool_switch.html</anchorfile>
+      <anchor>a7ac4cdc4f7d57d379cfa3a102c96ec37</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>overridden</name>
+      <anchorfile>da/d03/structeasy_parse_1_1_bool_switch.html</anchorfile>
+      <anchor>a99bc6ad2bdc962e0b203b84816e0432b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>setValue</name>
+      <anchorfile>da/d03/structeasy_parse_1_1_bool_switch.html</anchorfile>
+      <anchor>ac91d560d8ba91ca6dd8034125d83575b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>shortForm</name>
+      <anchorfile>da/d03/structeasy_parse_1_1_bool_switch.html</anchorfile>
+      <anchor>afd9b9cdd2a1d913cc4f6fb149da5a8c3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>easyParse::OptSwitch</name>
+    <filename>dc/d01/structeasy_parse_1_1_opt_switch.html</filename>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>longForm</name>
+      <anchorfile>dc/d01/structeasy_parse_1_1_opt_switch.html</anchorfile>
+      <anchor>ab10280d707a1d0904595bc15303a2cf2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>options</name>
+      <anchorfile>dc/d01/structeasy_parse_1_1_opt_switch.html</anchorfile>
+      <anchor>a0becb2c20f970b7e69b6d7a7dc5a36fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>overridden</name>
+      <anchorfile>dc/d01/structeasy_parse_1_1_opt_switch.html</anchorfile>
+      <anchor>a7e2dac169e8bc09faff60db25e3eb0ea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::size_t</type>
+      <name>setValue</name>
+      <anchorfile>dc/d01/structeasy_parse_1_1_opt_switch.html</anchorfile>
+      <anchor>a83946c8957a5aba87cfc4ce0f1e03439</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>easyParse::Positional</name>
+    <filename>d8/d03/structeasy_parse_1_1_positional.html</filename>
+    <member kind="variable">
+      <type>std::string_view</type>
+      <name>arg</name>
+      <anchorfile>d8/d03/structeasy_parse_1_1_positional.html</anchorfile>
+      <anchor>a543a1fa9ce14cdc23f306752de2ba37f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::size_t</type>
+      <name>pos</name>
+      <anchorfile>d8/d03/structeasy_parse_1_1_positional.html</anchorfile>
+      <anchor>a019fb360d734b185c529b20651f76136</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>easyParse</name>
+    <filename>d3/d01/namespaceeasy_parse.html</filename>
+    <class kind="class">easyParse::ArgParser</class>
+    <class kind="struct">easyParse::ArgSwitch</class>
+    <class kind="struct">easyParse::BoolSwitch</class>
+    <class kind="struct">easyParse::OptSwitch</class>
+    <class kind="struct">easyParse::Positional</class>
+    <member kind="function">
+      <type>constexpr char</type>
+      <name>advanceAndIgnoreQuotedText</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a8a34a55e1d5ed75281d9c686f5f5cb7f</anchor>
+      <arglist>(std::string_view::const_iterator &amp;iterator, std::string_view::const_iterator sentinel) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr std::pair&lt; char, bool &gt;</type>
+      <name>advanceOverText</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>af10947867452cf98dd9c1e7e4f194045</anchor>
+      <arglist>(std::string_view::const_iterator &amp;iterator, std::string_view::const_iterator sentinel)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr std::size_t</type>
+      <name>advanceOverWhiteSpace</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a05fb7cfc469c469384f4d6f208512626</anchor>
+      <arglist>(std::string_view line, std::size_t offset=0) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr std::pair&lt; char, bool &gt;</type>
+      <name>advanceSkipReportQuotedText</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>af1c9e91826bba583e7ac1cbe1082ba14</anchor>
+      <arglist>(std::string_view::const_iterator &amp;iterator, std::string_view::const_iterator sentinel)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Integer</type>
+      <name>convertBinaryString</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a71616cf7111b564f9342243fe293d7cd</anchor>
+      <arglist>(std::string_view numberString) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Integer</type>
+      <name>convertDecimalString</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>ad188e72542e1fd248fe410b35683fa80</anchor>
+      <arglist>(std::string_view numberString) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr char</type>
+      <name>convertEscapedString</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a3a421e865437a54854b72e032d603b4e</anchor>
+      <arglist>(std::string_view escapedString)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Integer</type>
+      <name>convertHexString</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a7ac3d2eb5194d6c5b609739f995206cc</anchor>
+      <arglist>(std::string_view numberString) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr UInteger</type>
+      <name>convertNumberString</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a2c0ee2a33eb534f41aa2b5cc035e1f66</anchor>
+      <arglist>(std::string_view numberString)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Integer</type>
+      <name>convertOctString</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a964ba14ba118fbd7919c4d7b3a8d7a0d</anchor>
+      <arglist>(std::string_view numberString) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr std::uint8_t</type>
+      <name>digitConverter</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a383d2ec71d7f3e35aa39aafa5e5ed09b</anchor>
+      <arglist>(char ch) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; std::string_view &gt;</type>
+      <name>extractNonText</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a4a3c87941a8f7c692271c3118f288eb8</anchor>
+      <arglist>(std::string_view string)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr std::string_view</type>
+      <name>extractTillDelimiter</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>aa305f026782deaef8e4aa90f9795af4f</anchor>
+      <arglist>(std::string_view &amp;string, char delim=&apos;,&apos;) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr std::uint8_t</type>
+      <name>hexDigitConverter</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a6db833dbe9ff5036a32fe7492d36af75</anchor>
+      <arglist>(char ch) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>isDecDigit</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>aba4f9b72eb1c4b21485d1e377af826e7</anchor>
+      <arglist>(char ch) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>isExactSubstr</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>aad1fe7d58ad6c56fca879230fd98824e</anchor>
+      <arglist>(std::string_view root, std::string_view check, std::size_t offset=0) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>isHexDigit</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a1896327a464d5e440cb5f5b60aa1d1bb</anchor>
+      <arglist>(char digit) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>isOctalDigit</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>ab218aa53d6c8847496a803364aac90cf</anchor>
+      <arglist>(char ch) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>isSubStringPresent</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>ad8c64b277e5eaa1dc78cb0a012584a99</anchor>
+      <arglist>(const std::string_view &amp;line, const std::string_view &amp;substr) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; std::string_view &gt;</type>
+      <name>splitUsingDelimiterList</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>ae4c7ea44e8d7cb6d6923ba1675ca55fe</anchor>
+      <arglist>(std::string_view string, std::vector&lt; char &gt; delim={&apos;,&apos;})</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr std::string_view</type>
+      <name>stripCommentsAndWhiteSpace</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>ab247ef08aa13c5326ed2e9e806071bb3</anchor>
+      <arglist>(const std::string_view &amp;line, char commentDelim) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr std::string_view</type>
+      <name>stripWhiteSpace</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>aa8171ce8b66e92017898d3f87bd2809a</anchor>
+      <arglist>(const std::string_view &amp;line) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr void</type>
+      <name>toLower</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>ae964184ca2cbe1169c10a5aaacb7c99d</anchor>
+      <arglist>(std::string &amp;str)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr std::string</type>
+      <name>toLower</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a721bb649943be8017ab96f58e1278f3e</anchor>
+      <arglist>(std::string_view str)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>validateBinString</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>ac6860e8c2165e695125ba5b5e638bf94</anchor>
+      <arglist>(std::string_view numberString) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>validateDecString</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a8dff27f93d144193342dcea9757281b3</anchor>
+      <arglist>(std::string_view numberString) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>validateHexString</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a38f5403ac61208f7919f9ec4010c2917</anchor>
+      <arglist>(std::string_view numberString) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>validateNumberString</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>acac317928fadc8abb57dafe432fd44af</anchor>
+      <arglist>(std::string_view numberString)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>validateOctString</name>
+      <anchorfile>d3/d01/namespaceeasy_parse.html</anchorfile>
+      <anchor>a1609af5be568fb129a358fc9a0062415</anchor>
+      <arglist>(std::string_view numberString) noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="page">
+    <name>md_docs_2doc__guide</name>
+    <title>Documentation Guide for EasyLibrary</title>
+    <filename>d4/d03/md_docs_2doc__guide.html</filename>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title>EasyParse library</title>
+    <filename>index.html</filename>
+    <docanchor file="index.html" title="EasyParse library">md_include_2easy_parse_lib_2_r_e_a_d_m_e</docanchor>
+  </compound>
+</tagfile>

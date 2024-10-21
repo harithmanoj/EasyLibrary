@@ -1,0 +1,7 @@
+easyMath::valueBetween(1, 2, 3)		= false
+easyMath::valueBetween(1.0l, 0.0l, 3.0l)		= true
+easyMath::valueBetween(1, 1, 2)		= false
+easyMath::valueBetween(2, 1, 2)		= false
+easyMath::valueBetweenInclusive(1, 1, 2)		= true
+easyMath::valueBetweenInclusive(2, 1, 2)		= true
+easyMath::valueBetweenInclusive(0.5, 0.0, 1.0)		= true
