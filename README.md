@@ -4,6 +4,8 @@ Contains miscellaneous C++ libraries, too small to organize into it's own reposi
 
 Latest Version: 1.0.1.alpha
 
+Requires EasyCMakeScripts package for 2 cmake scripts for version definition and example builder, specific files can be manually included by setting `EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT` option to location of the cmake scripts required.
+
 ## Quick Setup
 
 ### EasyMath Minimal
@@ -43,26 +45,101 @@ Latest Version: 1.0.1.alpha
 
 ## CMake Build Options
 
-Configs for each library:
-- `ALL_BUILD` - Builds Test and Examples
-- `LIB_EXAMPLE` - Builds Examples.
-- `LIB_TEST` - Builds Tests
-- `LIB` - No builds, header only library present.
-
-
 Configurable options:
-- `EASY_LIBRARY_BUILD_TEST` - Builds Tests, sets to config `LIB_TEST` or `ALL_BUILD`.
-- `EASY_LIBRARY_BUILD_EXAMPLE` - Builds Tests, sets to config `LIB_EXAMPLE` or `ALL_BUILD`.
-- `EASY_LIBRARY_BUILD_MATH` - Creates library `easyMath`.
-- `EASY_LIBRARY_BUILD_PARSE` - Creates library `easyParse`, overrides `EASY_LIBRARY_BUILD_MATH` to `ON`.
-- `EASY_LIBRARY_EXAMPLE_PIPE_OUT` - Creates script file to run each example and write output to file (for each config in `${CMAKE_BINARY_DIR0/Pipe/$<CONFIG>_run_ex.bat}`).
-- `EASY_LIBRARY_TEST_PIPE_OUT` - Creates script file to run each test and write output to file (for each config in `${CMAKE_BINARY_DIR0/Pipe/$<CONFIG>_run_test.bat}`).
+
+| Option                            | Description                           | Default Value | Remarks   |
+| ---                               | ---                                   | ---           | ---       |
+| `EASY_LIBRARY_DEVELOPMENT_BUILD`  | Enable building of tests, examples    | `OFF`         |           |
+| `EASY_LIBRARY_BUILD_MATH`         | Configure and build easyMath library  | `ON`          |           |
+| `EASY_LIBRARY_BUILD_PARSE`        | Configure and build easyParse library | `ON`          | sets `EASY_LIBRARY_BUILD_MATH` to `ON` |
+| `EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT` | Directory in which EasyCMakeScripts scripts are located for manual inclusion | `"OFF"` | |
+
+Options available if `EASY_LIBRARY_DEVELOPMENT_BUILD` is `ON`.
+
+| Option                            | Description                                               | Default Value |
+| ---                               | ---                                                       | ---           |
+| `EASY_LIBRARY_BUILD_TEST`         | Builds Tests                                              | `ON`          |
+| `EASY_LIBRARY_BUILD_EXAMPLE`      | Build Examples                                            | `ON`          |
+| `EASY_LIBRARY_EXAMPLE_PIPE_OUT`   | Generate script to run examples and write output to file  | `ON`          |
+| `EASY_LIBRARY_TEST_PIPE_OUT`      | Generate script to run test and write output to file      | `ON`          |
+
+## CMake Configuration Presets
+
+### easyMath
+
+Minimal config needed for easyMath library, sets:
+
+| Option | Value |
+| ---    | ---  |
+| `EASY_LIBRARY_DEVELOPMENT_BUILD`  | `OFF` |   
+| `EASY_LIBRARY_BUILD_MATH`         | `ON` |
+| `EASY_LIBRARY_BUILD_PARSE`        | `OFF` |
+
+### library
+
+Minimal config needed for easyMath and easyParse library, sets:
+
+| Option | Value |
+| ---    | ---  |
+| `EASY_LIBRARY_DEVELOPMENT_BUILD`  | `OFF` |   
+| `EASY_LIBRARY_BUILD_MATH`         | `ON` |
+| `EASY_LIBRARY_BUILD_PARSE`        | `ON` |
+
+### local-easyMath
+
+Minimal config needed for easyMath library but with local EasyCMakeScripts provided files, sets:
+
+| Option | Value |
+| ---    | ---  |
+| `EASY_LIBRARY_DEVELOPMENT_BUILD`  | `OFF` |   
+| `EASY_LIBRARY_BUILD_MATH`         | `ON` |
+| `EASY_LIBRARY_BUILD_PARSE`        | `OFF` |
+| `EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT`        | `"cmake"` |
+
+### manual-library
+
+Minimal config needed for easyMath and easyParse library but with local EasyCMakeScripts provided files, sets:
+
+| Option | Value |
+| ---    | ---  |
+| `EASY_LIBRARY_DEVELOPMENT_BUILD`  | `OFF` |   
+| `EASY_LIBRARY_BUILD_MATH`         | `ON` |
+| `EASY_LIBRARY_BUILD_PARSE`        | `ON` |
+| `EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT`        | `"cmake"` |
+
+### development
+
+Development Build, sets:
+
+| Option    | Value |
+| ---       | ---   |
+| `EASY_LIBRARY_DEVELOPMENT_BUILD` | `ON` |
+| `EASY_LIBRARY_BUILD_MATH` | `ON` |
+| `EASY_LIBRARY_BUILD_PARSE` | `ON` |
+| `EASY_LIBRARY_BUILD_TEST` | `ON` |
+| `EASY_LIBRARY_BUILD_EXAMPLE` | `ON` |
+| `EASY_LIBRARY_TEST_PIPE_OUT` | `ON` |
+| `EASY_LIBRARY_EXAMPLE_PIPE_OUT` | `ON` |
+### local-development
+
+Development Build, but with local EasyCMakeScripts provided files, sets:
+
+| Option    | Value |
+| ---       | ---   |
+| `EASY_LIBRARY_DEVELOPMENT_BUILD` | `ON` |
+| `EASY_LIBRARY_BUILD_MATH` | `ON` |
+| `EASY_LIBRARY_BUILD_PARSE` | `ON` |
+| `EASY_LIBRARY_BUILD_TEST` | `ON` |
+| `EASY_LIBRARY_BUILD_EXAMPLE` | `ON` |
+| `EASY_LIBRARY_TEST_PIPE_OUT` | `ON` |
+| `EASY_LIBRARY_EXAMPLE_PIPE_OUT` | `ON` |
+| `EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT`        | `"cmake"` |
 
 ## Libraries available
 
-- `easyLibrary` : Header only library, version info only.
-- `easyMath`: Header only library, miscellaneous mathematical code. Depends on `easyLibrary`.
-- `easyParse`: miscellaneous string parsing code, command line argument parser. Depends on `easyMath`, `easyLibrary`.
+- `easyLibraryFlags` : Header only library, version info only, include under `easyLib`.
+- `easyMath`: Header only library, miscellaneous mathematical code. Depends on `easyLibrary`. Include under `easyMathLib`.
+- `easyParse`: miscellaneous string parsing code, command line argument parser. Depends on `easyMath`, `easyLibrary`. Include under `easyParseLib`.
 
 <hr/>
 <p style="text-align: center;">

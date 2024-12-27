@@ -39,29 +39,24 @@ namespace easyLib
     namespace meta
     {
         /// @brief Version as a string.
-        constexpr std::string_view versionString = "1.0.1.alpha";
+        constexpr std::string_view versionString = EASY_LIBRARY_VERSION_FULLSTRING;
 
         /// @brief Major Version
-        constexpr std::uint64_t versionMajor = 1ull;
+        constexpr std::uint64_t versionMajor = EASY_LIBRARY_VERSION_MAJOR;
 
         /// @brief Minor Version
-        constexpr std::uint64_t versionMinor = 0ull;
+        constexpr std::uint64_t versionMinor = EASY_LIBRARY_VERSION_MINOR;
 
         /// @brief Revision Version
-        constexpr std::uint64_t versionRevision = 1ull;
-        
-        /// @brief Enum of different build types.
-        enum class BuildType
-        {
-            /// @brief Alpha release (functionality added, minimal testing).
-            ALPHA,
+        constexpr std::uint64_t versionRevision = EASY_LIBRARY_VERSION_REVISION;
 
-            /// @brief Stable release (tested extensively).
-            STABLE
-        };
+        using ReleaseType = std::uint8_t;
+
+        constexpr ReleaseType ALPHA = 0;
+        constexpr ReleaseType RELEASE = 1;
 
         /// @brief Version Build Type.
-        constexpr BuildType versionBuild = BuildType::ALPHA;
+        constexpr ReleaseType versionBuild = EASY_LIBRARY_VERSION_BUILD_CODE;
     }
 }
 

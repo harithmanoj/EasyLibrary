@@ -1,0 +1,80 @@
+
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "easyMath",
+            "displayName": "Minimal preset for easyMath",
+            "description": "Preset suitable for easyMath",
+            "cacheVariables": {
+                "EASY_LIBRARY_DEVELOPMENT_BUILD": "OFF",
+                "EASY_LIBRARY_BUILD_MATH": "ON",
+                "EASY_LIBRARY_BUILD_PARSE": "OFF",
+                "EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT": "OFF"
+            }
+        },
+        {
+            "name": "library",
+            "displayName": "Minimal preset for easyMath and easyPackage",
+            "description": "Preset suitable for both easyMath and easyParse",
+            "cacheVariables": {
+                "EASY_LIBRARY_DEVELOPMENT_BUILD": "OFF",
+                "EASY_LIBRARY_BUILD_MATH": "ON",
+                "EASY_LIBRARY_BUILD_PARSE": "ON",
+                "EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT": "OFF"
+            }
+        },
+        {
+            "name": "local-easyMath",
+            "displayName": "Preset for easyMath with local EasyCMakeScripts",
+            "description": "Preset suitable for easyMath with EasyCMakeScripts files in cmake folder",
+            "cacheVariables": {
+                "EASY_LIBRARY_DEVELOPMENT_BUILD": "OFF",
+                "EASY_LIBRARY_BUILD_MATH": "ON",
+                "EASY_LIBRARY_BUILD_PARSE": "OFF",
+                "EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT": "cmake"
+            }
+        },
+        {
+            "name": "local-library",
+            "displayName": "Preset for easyMath and easyPackage with local EasyCMakeScripts",
+            "description": "Preset suitable for both easyMath and easyParse with EasyCMakeScripts files in cmake folder",
+            "cacheVariables": {
+                "EASY_LIBRARY_DEVELOPMENT_BUILD": "OFF",
+                "EASY_LIBRARY_BUILD_MATH": "ON",
+                "EASY_LIBRARY_BUILD_PARSE": "ON",
+                "EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT": "cmake"
+            }
+        },
+        {
+            "name": "development",
+            "displayName": "Development build with examples and basic tests",
+            "description": "Preset suitable for development build",
+            "cacheVariables": {
+                "EASY_LIBRARY_DEVELOPMENT_BUILD": "ON",
+                "EASY_LIBRARY_BUILD_MATH": "ON",
+                "EASY_LIBRARY_BUILD_PARSE": "ON",
+                "EASY_LIBRARY_BUILD_TEST": "ON",
+                "EASY_LIBRARY_BUILD_EXAMPLE": "ON",
+                "EASY_LIBRARY_TEST_PIPE_OUT": "ON",
+                "EASY_LIBRARY_EXAMPLE_PIPE_OUT": "ON",
+                "EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT": "OFF"
+            }
+        },
+        {
+            "name": "local-development",
+            "displayName": "Development build with examples and basic tests and local EasyCMakeScripts",
+            "description": "Preset suitable for development build",
+            "cacheVariables": {
+                "EASY_LIBRARY_DEVELOPMENT_BUILD": "ON",
+                "EASY_LIBRARY_BUILD_MATH": "ON",
+                "EASY_LIBRARY_BUILD_PARSE": "ON",
+                "EASY_LIBRARY_BUILD_TEST": "ON",
+                "EASY_LIBRARY_BUILD_EXAMPLE": "ON",
+                "EASY_LIBRARY_TEST_PIPE_OUT": "ON",
+                "EASY_LIBRARY_EXAMPLE_PIPE_OUT": "ON",
+                "EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT": "cmake"
+            }
+        }
+    ]
+}

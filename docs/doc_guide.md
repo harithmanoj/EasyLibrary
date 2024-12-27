@@ -19,6 +19,15 @@ When concept documentation or other requirements specify a function signature.
 eg: `[std::string_view] to_string([int] value) const noexcept`
 Requires a method `to_string` which takes an argument that can be constructed from `int` (eg `long` is acceptable) and returns a type that can be implicitly converted to `std::string_view`, `std::string to_string(long value) const noexcept` is a method that will satisfy this requirement.
 
+## Branch Naming
+
+- master - stable release (except 1.0.1 alpha).
+- develop - latest features and fixes
+- bs-{} - build system (cmake) updates to features, implementation.
+- feature-{} - feature branch
+- fix-{} - bug fix branch
+- release-{} - release management branch (modify version info, documentation, cleanup)
+
 
 
 <hr/>

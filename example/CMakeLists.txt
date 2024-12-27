@@ -3,28 +3,43 @@
 # Licensed under Apache License, Version 2.0
 # Date: 14 August 2024
 
-include(../cmake/exampleBuild.cmake)
+include(easyCMakeExampleBuilder)
 
 message(STATUS "CMAKE Now at EasyLibrary Examples Configuration")
 
 if(EASY_LIBRARY_EXAMPLE_PIPE_OUT)
     message(STATUS "    Example piped output to file")
+    easyCMake_setupExampleConfig()
 else()
     message(STATUS "    Example no piped output")
 endif(EASY_LIBRARY_EXAMPLE_PIPE_OUT)
+
+function(exampleGen targetName sourceList createPipe module dep)
+    if(createPipe AND EASY_LIBRARY_EXAMPLE_PIPE_OUT)
+        easyCMake_configureExample(
+            TARGET ${targetName}
+            MODULE ${module}
+            SRC ${sourceList}
+            DEP ${dep}
+            CREATE_PIPE
+        )
+    else()
+        easyCMake_configureExample(
+            TARGET ${targetName}
+            MODULE ${module}
+            SRC ${sourceList}
+            DEP ${dep}
+        )
+    endif(createPipe AND EASY_LIBRARY_EXAMPLE_PIPE_OUT)
+endfunction(exampleGen targetName sourceList createPipe module dep)
+
 
 if(EASY_LIBRARY_BUILD_MATH)
 
     message(STATUS "    Configuring for EasyMath examples")
 
     function(exampleEasyMath targetName sourceList createPipe)
-        if(createPipe AND EASY_LIBRARY_EXAMPLE_PIPE_OUT)
-            set(EXAMPLE_BUILDER_CREATE_PIPE ON)
-        else()
-            set(EXAMPLE_BUILDER_CREATE_PIPE OFF)
-        endif(createPipe AND EASY_LIBRARY_EXAMPLE_PIPE_OUT)
-
-        exampleBuildTemplate("easyMath" ${targetName} ${sourceList} easyMath EXAMPLE_BUILDER_CREATE_PIPE)
+        exampleGen(${targetName} ${sourceList} ${createPipe} "easyMath" "easyMath")
     endfunction(exampleEasyMath)
 
     exampleEasyMath(valueBetween valueBetween.cpp ON)
@@ -38,14 +53,7 @@ endif(EASY_LIBRARY_BUILD_MATH)
 if(EASY_LIBRARY_BUILD_PARSE)
 
     function(exampleEasyParse targetName sourceList createPipe)
-        if(createPipe AND EASY_LIBRARY_EXAMPLE_PIPE_OUT)
-            set(EXAMPLE_BUILDER_CREATE_PIPE ON)
-        else()
-            set(EXAMPLE_BUILDER_CREATE_PIPE OFF)
-        endif(createPipe AND EASY_LIBRARY_EXAMPLE_PIPE_OUT)
-        
-        exampleBuildTemplate("easyParse" ${targetName} ${sourceList} easyParse EXAMPLE_BUILDER_CREATE_PIPE)
-
+        exampleGen(${targetName} ${sourceList} ${createPipe} "easyParse" "easyParse")
     endfunction(exampleEasyParse)
 
     exampleEasyParse(binaryString stringConv.cpp ON)
@@ -58,5 +66,8 @@ if(EASY_LIBRARY_BUILD_PARSE)
 
 endif(EASY_LIBRARY_BUILD_PARSE)
 
-pipeExampleOutScript()
+if(EASY_LIBRARY_EXAMPLE_PIPE_OUT)
+    easyCMake_generatePipeOutScript(easyLibraryFlags)
+endif(EASY_LIBRARY_EXAMPLE_PIPE_OUT)
+
 

@@ -67,12 +67,10 @@ mkdir %easyLibraryCompleteDir%\include
 mkdir %easyLibraryCompleteDir%\src
 mkdir %easyLibraryCompleteDir%\test
 mkdir %easyLibraryCompleteDir%\example
-mkdir %easyLibraryCompleteDir%\cmake
 
 xcopy /e /k .\include\* %easyLibraryCompleteDir%\include
 xcopy /e /k .\test\* %easyLibraryCompleteDir%\test
 xcopy /e /k .\example\* %easyLibraryCompleteDir%\example
-xcopy /e /k .\cmake\* %easyLibraryCompleteDir%\cmake
 xcopy /e /k .\src\* %easyLibraryCompleteDir%\src
 copy LICENSE %easyLibraryCompleteDir%
 copy README.md %easyLibraryCompleteDir%
