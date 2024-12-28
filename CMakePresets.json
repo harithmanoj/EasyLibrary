@@ -32,7 +32,7 @@
                 "EASY_LIBRARY_DEVELOPMENT_BUILD": "OFF",
                 "EASY_LIBRARY_BUILD_MATH": "ON",
                 "EASY_LIBRARY_BUILD_PARSE": "OFF",
-                "EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT": "cmake"
+                "EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT": "cmake/EasyCMakeScripts"
             }
         },
         {
@@ -43,7 +43,7 @@
                 "EASY_LIBRARY_DEVELOPMENT_BUILD": "OFF",
                 "EASY_LIBRARY_BUILD_MATH": "ON",
                 "EASY_LIBRARY_BUILD_PARSE": "ON",
-                "EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT": "cmake"
+                "EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT": "cmake/EasyCMakeScripts"
             }
         },
         {
@@ -73,7 +73,7 @@
                 "EASY_LIBRARY_BUILD_EXAMPLE": "ON",
                 "EASY_LIBRARY_TEST_PIPE_OUT": "ON",
                 "EASY_LIBRARY_EXAMPLE_PIPE_OUT": "ON",
-                "EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT": "cmake"
+                "EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT": "cmake/EasyCMakeScripts"
             }
         }
     ]

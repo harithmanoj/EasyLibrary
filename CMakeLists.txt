@@ -10,6 +10,7 @@ option(EASY_LIBRARY_DEVELOPMENT_BUILD "Build tests, enable warnings, etc" OFF)
 option(EASY_LIBRARY_BUILD_MATH "Should add easyMath library (OFF if using partial copy of EasyLibrary without source files of easyMath)" ON)
 option(EASY_LIBRARY_BUILD_PARSE "Should add easyParse library (OFF is using partial copy of EasyLibrary without source files of easyParse)" ON)
 option(EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT "Use local version of easyCMakeScrripts modules rathar than installed versions" OFF)
+option(EASY_LIBRARY_PREPARE_RELEASE "Prepare release scripts" OFF)
 
 include(CMakeDependentOption)
 
@@ -32,9 +33,11 @@ project(EasyLibrary VERSION ${EASY_LIBRARY_VERSION} DESCRIPTION "Collection of C
 
 # Packages
 if(NOT EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT)
-    find_package(EasyCMakeScripts 1.0.2 REQUIRED)
+    find_package(EasyCMakeScripts 1.0.3 REQUIRED)
+    set(EASY_CMAKE_SCRIPTS_LOCATION "${EasyCMakeScripts_DIR}")
 else()
     list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/${EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT}")
+    set(EASY_CMAKE_SCRIPTS_LOCATION "${CMAKE_SOURCE_DIR}/${EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT}")
 endif(NOT EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT)
 
 include(easyCMakeVersion)
@@ -154,5 +157,9 @@ endif(EASY_LIBRARY_BUILD_EXAMPLE)
 if(EASY_LIBRARY_BUILD_TEST)
     add_subdirectory(test)    
 endif(EASY_LIBRARY_BUILD_TEST)
+
+if(EASY_LIBRARY_PREPARE_RELEASE)
+    configure_file(res/compressRelease.py.in compressRelease.py)
+endif(EASY_LIBRARY_PREPARE_RELEASE)
 
 

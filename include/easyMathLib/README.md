@@ -23,11 +23,6 @@ For Examples if `EASY_LIBRARY_BUILD_EXAMPLE` set,
 - example/overflowUnderflow.cpp
 - example/valueBetween.cpp
 
-For Tests if `EASY_LIBRARY_BUILD_TEST` set,
-- cmake/testBuild.cmake
-- test/CMakeLists.txt
-- test/valueBetween.cpp
-
 <b>Requires C++ 20</b>
 
 <hr/>
