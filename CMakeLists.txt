@@ -11,6 +11,7 @@ option(EASY_LIBRARY_BUILD_MATH "Should add easyMath library (OFF if using partia
 option(EASY_LIBRARY_BUILD_PARSE "Should add easyParse library (OFF is using partial copy of EasyLibrary without source files of easyParse)" ON)
 option(EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT "Use local version of easyCMakeScrripts modules rathar than installed versions" OFF)
 option(EASY_LIBRARY_PREPARE_RELEASE "Prepare release scripts" OFF)
+option(EASY_LIBRARY_HAS_CONFIGURED_VERSION_HEADER "Already configured version header available, dependency on EasyCMakeScripts not required" OFF)
 
 include(CMakeDependentOption)
 
@@ -31,16 +32,7 @@ set(EASY_LIBRARY_RELEASE_CODE 0)
 
 project(EasyLibrary VERSION ${EASY_LIBRARY_VERSION} DESCRIPTION "Collection of C++ libraries")
 
-# Packages
-if(NOT EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT)
-    find_package(EasyCMakeScripts 1.0.3 REQUIRED)
-    set(EASY_CMAKE_SCRIPTS_LOCATION "${EasyCMakeScripts_DIR}")
-else()
-    list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/${EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT}")
-    set(EASY_CMAKE_SCRIPTS_LOCATION "${CMAKE_SOURCE_DIR}/${EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT}")
-endif(NOT EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT)
 
-include(easyCMakeVersion)
 
 message(STATUS "CMAKE Now at EasyLibrary version:         ${EASY_LIBRARY_VERSION}.${EASY_LIBRARY_RELEASE_TYPE}")
 
@@ -69,26 +61,48 @@ add_library(
     easyLibraryFlags
     INTERFACE
 )
+# Packages
 
-easyCMake_targetDefineVersion(
-    TARGET easyLibraryFlags
-    SCOPE INTERFACE
-    MAJOR ${EASY_LIBRARY_VERSION_MAJOR}
-    MINOR ${EASY_LIBRARY_VERSION_MINOR}
-    REVISION ${EASY_LIBRARY_VERSION_REVISION}
-    BUILD_CODE ${EASY_LIBRARY_RELEASE_CODE}
-    FULLSTRING "${EASY_LIBRARY_VERSION}.${EASY_LIBRARY_RELEASE_CODE}"
-    NAME_PREFIX "EASY_LIBRARY_VERSION"
-)
+if(NOT EASY_LIBRARY_HAS_CONFIGURED_VERSION_HEADER)
+    
+    if(NOT EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT)
+        find_package(EasyCMakeScripts 1.0.4 REQUIRED)
+        set(EASY_CMAKE_SCRIPTS_LOCATION "${EasyCMakeScripts_DIR}")
+    else()
+        list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/${EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT}")
+        set(EASY_CMAKE_SCRIPTS_LOCATION "${CMAKE_SOURCE_DIR}/${EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT}")
+    endif(NOT EASY_LIBRARY_USE_LOCAL_EASY_SCRIPT)
+
+    include(easyCMakeVersion)
+    
+    easyCMake_generateVersionHeader(
+        TARGET easyLibraryFlags
+        SCOPE INTERFACE
+        NAME easyLibrary
+        DESCRIPTION "Header to store version of project easyLibrary"
+        NAMESPACE easyLib
+        MAJOR ${EASY_LIBRARY_VERSION_MAJOR}
+        MINOR ${EASY_LIBRARY_VERSION_MINOR}
+        REVISION ${EASY_LIBRARY_VERSION_REVISION}
+        BUILD_CODE ${EASY_LIBRARY_RELEASE_CODE}
+        FULLSTRING "${EASY_LIBRARY_VERSION}.${EASY_LIBRARY_RELEASE_TYPE}"
+        OUT_NAME "version.h"
+        OUT_DIR "easyLib"
+    ) 
+else() 
+
+    target_include_directories(
+        easyLibraryFlags INTERFACE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+    )
+
+endif(NOT EASY_LIBRARY_HAS_CONFIGURED_VERSION_HEADER)
+
 
 add_library(easyLibrary::easyLibraryFlags ALIAS easyLibraryFlags)
 
 target_compile_features(easyLibraryFlags INTERFACE cxx_std_20)
 
-target_include_directories(
-    easyLibraryFlags INTERFACE 
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
 set_target_properties(easyLibraryFlags PROPERTIES LINKER_LANGUAGE CXX)
 set_target_properties(easyLibraryFlags PROPERTIES VERSION ${EASY_LIBRARY_VERSION})
 

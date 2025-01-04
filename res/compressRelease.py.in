@@ -1,93 +1,60 @@
 import zipfile
 import sys
+import shutil
 
 version = "@EASY_LIBRARY_VERSION@.@EASY_LIBRARY_RELEASE_TYPE@"
 
 root = "@CMAKE_CURRENT_SOURCE_DIR@"
-easyCMakeScriptFilePath = "@EASY_CMAKE_SCRIPTS_LOCATION@"
 
-def release(filename, contents, cmake = None):
+def release(filename, contents):
     print("Creating " + filename)
     with zipfile.ZipFile(filename + "." + version + ".zip", "w", compression=zipfile.ZIP_DEFLATED) as zip:
-        for file in contents:
-            zip.write(root + "/" + file, file)
-        
-        if cmake is not None:
-            for file in cmake:
-                zip.write(easyCMakeScriptFilePath + "/" + file, "cmake/EasyCMakeScripts/" + file)
+        for file, location in contents:
+            if location is None:
+                location = file
+            zip.write(root + "/" + file, location)
 
 minimal_easyMath = [
-    "include/easyLib/version.h",
-    "include/easyMathLib/easyMath.h",
-    "include/easyMathLib/README.md",
-    "LICENSE",
-    "README.md"
-]
-
-minimal_easyMath_cmake = [
-    "easyCMakeVersion.cmake",
-    "LICENSE"
+    ("@CMAKE_BINARY_DIR@/include/easyLib/version.h", "include/easyLib/version.h),
+    ("include/easyMathLib/easyMath.h", None),
+    ("include/easyMathLib/README.md", None),
+    ("LICENSE", None),
+    ("README.md", None)
 ]
 
 minimal_easyLibrary = [
-    "include/easyLib/version.h",
-    "include/easyMathLib/easyMath.h",
-    "include/easyMathLib/README.md",
-    "include/easyParseLib/easyParse.h",
-    "include/easyParseLib/ArgParser.h",
-    "include/easyParseLib/README.md",
-    "src/easyParseLib/easyParse.cpp",
-    "src/easyParseLib/argParser.cpp",
-    "LICENSE",
-    "README.md"
-]
-
-minimal_easyLibrary_cmake = [
-    "easyCMakeVersion.cmake",
-    "LICENSE"
-]
-
-local_build = [
-    "include/easyLib/version.h",
-    "include/easyMathLib/easyMath.h",
-    "include/easyMathLib/README.md",
-    "include/easyParseLib/easyParse.h",
-    "include/easyParseLib/ArgParser.h",
-    "include/easyParseLib/README.md",
-    "src/easyParseLib/easyParse.cpp",
-    "src/easyParseLib/argParser.cpp",
-    "LICENSE",
-    "README.md",
-    "CMakeLists.txt",
-    "CMakePresets.json"
-]
-
-local_build_cmake = [
-    "easyCMakeVersion.cmake",
-    "LICENSE"
+    ("@CMAKE_BINARY_DIR@/include/easyLib/version.h", "include/easyLib/version.h),
+    ("include/easyMathLib/easyMath.h", None),
+    ("include/easyMathLib/README.md", None),
+    ("include/easyParseLib/easyParse.h", None),
+    ("include/easyParseLib/ArgParser.h", None),
+    ("include/easyParseLib/README.md", None),
+    ("src/easyParseLib/easyParse.cpp", None),
+    ("src/easyParseLib/argParser.cpp", None),
+    ("LICENSE", None),
+    ("README.md", None)
 ]
 
 build = [
-    "include/easyLib/version.h",
-    "include/easyMathLib/easyMath.h",
-    "include/easyMathLib/README.md",
-    "include/easyParseLib/easyParse.h",
-    "include/easyParseLib/ArgParser.h",
-    "include/easyParseLib/README.md",
-    "src/easyParseLib/easyParse.cpp",
-    "src/easyParseLib/argParser.cpp",
-    "LICENSE",
-    "README.md",
-    "CMakeLists.txt",
-    "CMakePresets.json"
+    ("@CMAKE_BINARY_DIR@/include/easyLib/version.h", "include/easyLib/version.h),
+    ("include/easyMathLib/easyMath.h", None),
+    ("include/easyMathLib/README.md", None),
+    ("include/easyParseLib/easyParse.h", None),
+    ("include/easyParseLib/ArgParser.h", None),
+    ("include/easyParseLib/README.md", None),
+    ("src/easyParseLib/easyParse.cpp", None),
+    ("src/easyParseLib/argParser.cpp", None),
+    ("LICENSE", None),
+    ("README.md", None),
+    ("CMakeLists.txt", None),
+    ("CMakePresets.json", None)
 ]
 
 
 if not os.path.exists(root + "/build/releaseZip"):
     os.makedirs(root + "/build/releaseZip")
 
-release(root + "/build/releaseZip/easyLibrary.minimal.easyMath", minimal_easyMath, minimal_easyMath_cmake)
-release(root + "/build/releaseZip/easyLibrary.minimal", minimal_easyLibrary, minimal_easyLibrary_cmake)
+release(root + "/build/releaseZip/easyLibrary.minimal.easyMath", minimal_easyMath)
+release(root + "/build/releaseZip/easyLibrary.minimal", minimal_easyLibrary)
 release(root + "/build/releaseZip/easyLibrary.build", build)
-release(root + "/build/releaseZip/easyLibrary.build.local", local_build, local_build_cmake)
-
+shutil.copyfile("@CMAKE_BINARY_DIR@/include/easyLib/version.h", root + "/build/releaseZip/version.h")
